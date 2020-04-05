@@ -10,6 +10,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import os
 import json
+import platform
 
 class bcolors:
     HEADER = '\033[95m'
@@ -22,6 +23,18 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 clear_cmd = "clear"
+
+os_name = platform.system()
+
+driver_path = "./chromedriver"
+if os_name == 'Linux':
+    driver_path = './chromedriver'
+elif os_name == 'Windows':
+    driver_path = 'chromedriver.exe'
+    clear_cmd = 'cls'
+else:
+    driver_path = 'chromedrivermac'
+
 
 with open('data.json') as f:
   data = json.load(f)
@@ -60,7 +73,7 @@ d88'   88b`?8888P' `?888P'888P'      `?88P'?8b `?8888P'`?88P'?8b    `?88P'`88b`?
                                                                              
     ''')
 
-    driver_path = './chromedriver'
+    global driver_path
     username = input("Please enter your name: ")
     if(username == ''):
         name:'no_one'
