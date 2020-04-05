@@ -69,7 +69,7 @@ d88'   88b`?8888P' `?888P'888P'      `?88P'?8b `?8888P'`?88P'?8b    `?88P'`88b`?
     driver = webdriver.Chrome(executable_path = driver_path)
 
     driver.get('https://howyoudoin.netlify.com/')
-
+    
     username_input = WebDriverWait(driver, 60).until(
         EC.presence_of_element_located((By.XPATH, "//input[@id='outlined-basic']")))
     username_input.send_keys(username)
