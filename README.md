@@ -1,5 +1,7 @@
 # F.R.I.E.N.D.S
 
+![How you doin](/images/bot_on_work.png)
+
 A simple python bot for completing instagram challenge at https://howyoudoin.netlify.com
 
 ### Installation
